@@ -5,5 +5,5 @@ Integer >> Z [
 
 	^ self isZero
 		  ifTrue: [ BlockClosure I K ]
-		  ifFalse: [ [ :f | [ :x | f B value: x ] ] S value: (self - 1) Z ]
+		  ifFalse: [ BlockClosure B S value: (self - 1) Z ]
 ]

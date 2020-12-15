@@ -19,6 +19,19 @@ BlockClosure class >> I [
 ]
 
 { #category : #'*Combst' }
+BlockClosure >> R [
+
+	| f |
+	f := [ :y | 
+	     | first second yFirst |
+	     yFirst := y value: 0 Z.
+	     first := self class B S value: yFirst.
+	     second := (self value: yFirst) value: (y value: 1 Z).
+	     first D2 value: second ].
+	^ [ :a | [ :n | ((n value: f) value: (0 Z D2 value: a)) value: 1 Z ] ]
+]
+
+{ #category : #'*Combst' }
 BlockClosure >> S [
 
 	^ [ :g | [ :x | (self value: x) value: (g value: x) ] ]
