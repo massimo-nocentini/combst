@@ -1,6 +1,12 @@
 Extension { #name : #BlockClosure }
 
 { #category : #'*Combst' }
+BlockClosure class >> B [
+
+	^ [ :f | [ :x | f B value: x ] ]
+]
+
+{ #category : #'*Combst' }
 BlockClosure >> B [
 
 	^ [ :g | [ :x | self value: (g value: x) ] ]
